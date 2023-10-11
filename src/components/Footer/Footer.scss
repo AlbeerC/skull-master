@@ -1,0 +1,70 @@
+@import '../../scss/variables';
+
+footer {
+    padding: 0 4rem;
+    background-color: #f1e6d5;
+    color: #000000;
+
+    @include responsive(tablet) {
+        padding: 0 2rem;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+
+        @include responsive(tablet) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        div {
+            p {
+                &:last-child {
+                    padding-top: 2rem;
+                }
+            }
+        }
+
+        .middle {
+            ul li {
+                text-decoration: underline;
+                font-size: 1.8rem;
+                cursor: pointer;
+
+                &:nth-child(2) {
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .right {
+            p {
+                color: $mainColor;
+            }
+        }
+    }
+
+    .copy {
+        margin-top: 5rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+
+        a {
+            color: #000000;
+
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+}

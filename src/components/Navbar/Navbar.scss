@@ -1,0 +1,75 @@
+@import '../../scss/variables';
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+
+    @include responsive(pc) {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: 33%;
+
+        @include responsive(pc) {
+            width: auto;
+            padding-top: 1rem;
+        }
+
+        li {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            a {
+                color: #ffffff;
+            }
+
+            &:hover {
+                border-bottom: solid 6px $mainColor;
+            }
+        }
+    }
+
+    img {
+        max-height: 20rem;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        max-width: 33%;
+    }
+
+    .right {
+        width: 33%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include responsive(pc) {
+            display: none;
+        }
+    }
+
+    button {
+        background-color: $mainColor;
+        color: #ffffff;
+        border-radius: 1.2rem;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-size: 1.7rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #c44f4b;
+        }
+    }
+}

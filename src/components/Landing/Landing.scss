@@ -1,0 +1,19 @@
+.landing {
+    margin-top: 5rem;
+    text-align: center;
+
+    h1 {
+        font-size: 5rem;
+        background: #f4b3b3; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #bb5c5c, #f70101); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #bb5c5c, #f70101); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+}

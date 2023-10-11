@@ -1,0 +1,88 @@
+@import '../../scss/variables';
+
+.paint {
+    margin-top: 5rem;
+
+    .paint-gallery {
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        gap: 7rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 10rem;
+        align-items: stretch;
+
+        @include responsive(pc) {
+            grid-template-columns: 1fr 1fr;
+            margin: 0 2rem;
+            gap: 3rem;
+        }
+
+        img {
+            width: 100%;
+            max-height: 45rem;
+            cursor: zoom-in;
+        }
+    }
+
+    .image-modal {
+        position: fixed;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+
+        img {
+            height: 90%;
+            width: 40%;
+
+            @include responsive(pc) {
+                width: 70%;
+                height: auto;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .close-button {
+            position: fixed;
+            top: 5%;
+            right: 5%;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .prev-button, .next-button {
+            font-size: 8rem;
+        }
+    }
+
+    .bottom {
+        margin: 8rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+
+        p {
+            font-weight: 700;
+
+            &:last-child {
+                color: $mainColor;
+                margin-top: 1rem;
+                font-size: 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+  
