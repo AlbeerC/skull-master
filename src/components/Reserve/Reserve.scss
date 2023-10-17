@@ -1,0 +1,100 @@
+@import '../../scss/variables';
+
+.reserve {
+    margin-top: 5rem;
+
+    h2 {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 3rem;
+        font-family: $mainFont;
+        color: $mainColor;
+    }
+
+    form {
+        max-width: 40vw;
+        margin: 0 auto;
+
+        @include responsive(pc) {
+            width: 70vw;
+            max-width: 70vw;
+        }
+        
+        .field {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 0;
+
+            label {
+                font-size: 2rem;
+                letter-spacing: 2px;
+                font-family: $mainFont;
+                padding-bottom: .5rem;
+                font-weight: 700;
+            }
+
+            input {
+                width: 40vw;
+                padding: 1.5rem;
+                font-size: 2rem;
+
+                @include responsive(pc) {
+                    width: 70vw;
+                }
+            }
+        }
+
+        .add-files {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                font-size: 2rem;
+                letter-spacing: 3px;
+                font-family: $mainFont;
+                padding-bottom: .5rem;
+                font-weight: 700;
+            }
+
+            button {
+                background-color: $mainColor;
+                color: #ffffff;
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 2rem;
+                font-size: 1.7rem;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: .7rem;
+
+                &:hover {
+                    background-color: #c44f4b;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            background-color: $mainColor;
+            color: #ffffff;
+            padding: 1rem 5rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.7rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: .7rem;
+            margin-bottom: 5rem;
+
+            &:hover {
+                background-color: #c44f4b;
+            }
+        }
+    }
+}

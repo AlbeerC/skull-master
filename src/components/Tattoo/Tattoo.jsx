@@ -18,6 +18,8 @@ import image15 from '../../assets/tattoos/15.jpg'
 import image16 from '../../assets/tattoos/16.jpeg'
 import image17 from '../../assets/tattoos/17.jpeg'
 import image18 from '../../assets/tattoos/18.jpg'
+import Landing from "../Landing/Landing";
+import { Link } from "react-router-dom";
 
 const images = [
   image1, image2, image3, image4, image5, image6, image7, image8,
@@ -59,6 +61,7 @@ function Tattoo() {
 
   return (
     <section className="tattoo">
+      <Landing />
       <div className="tattoo-gallery">
         {images.map((image, index) => (
           <img
@@ -81,7 +84,7 @@ function Tattoo() {
 
       <div className="bottom">
         <p>¿Listo para reservar tu tatuaje?</p>
-        <p>Llena el formulario</p>
+        <Link to="/reserve"><p>Llena el formulario</p></Link>
       </div>
     </section>
   );

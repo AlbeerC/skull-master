@@ -9,6 +9,7 @@ import image6 from '../../assets/paints/paint6.jpeg'
 import image7 from '../../assets/paints/paint7.jpeg'
 import image8 from '../../assets/paints/paint8.jpg'
 import image9 from '../../assets/paints/paint9.webp'
+import Landing from '../Landing/Landing'
 
 function Paint () {
 
@@ -48,6 +49,7 @@ function Paint () {
 
     return (
         <section className="paint">
+            <Landing />
             <div className="paint-gallery">
             {images.map((image, index) => (
                 <img

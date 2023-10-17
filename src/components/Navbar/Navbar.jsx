@@ -7,14 +7,13 @@ function Navbar () {
     return (
         <header>
             <ul>
-                <li><Link to="/">Tattoo</Link></li>
-                <li><Link to="/paints">Pintura</Link></li>
-                <li><Link to="/info">Info</Link></li>
-                <li><Link to="/date">Contacto</Link></li>
+                <Link to="/"><li>Tattoo</li></Link>
+                <Link to="/paints"><li>Pintura</li></Link>
+                <Link to="/info"><li>Info</li></Link>
             </ul>
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo skull master"/>
             <div className="right">
-                <button>Reservar turno</button> 
+                <Link to="/reserve"><button>Reservar turno</button></Link>
             </div>
         </header>
     )

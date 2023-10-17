@@ -1,0 +1,67 @@
+@import '../../scss/variables';
+
+.info {
+    margin-top: 10rem;
+
+    .split {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+
+        @include responsive(tablet) {
+            flex-direction: column-reverse;
+            gap: 5rem;
+        }
+
+        .left {
+            max-width: 30%;
+
+            @include responsive(pc) {
+                max-width: 100%;
+                margin: 0 2rem;
+            }
+    
+            h2 {
+                color: $mainColor;
+                padding-bottom: 2rem;
+                font-size: 3rem;
+            }
+    
+            p {
+                line-height: 40px;
+                text-align: justify;
+                font-size: 2rem;
+            }
+        }
+    
+        .right {
+            max-width: 50%;
+
+            @include responsive(pc) {
+                max-width: 100%;
+            }
+    
+            img {
+                max-width: 50rem;
+                max-height: 50rem;
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        margin: 5rem 0;
+
+        img {
+            max-height: 30rem;
+            width: 100%;
+            transition: all ease 1000ms;
+            filter: brightness(80%);
+
+            &:hover {
+                filter: brightness(50%);
+            }
+        }
+    }
+}
