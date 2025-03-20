@@ -7,8 +7,9 @@ header {
     padding: 1rem 7rem;
 
     @include responsive(pc) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
+        gap: 1rem;
     }
 
     ul {
@@ -52,7 +53,7 @@ header {
         justify-content: flex-end;
 
         @include responsive(pc) {
-            display: none;
+            width: auto;
         }
     }
 
